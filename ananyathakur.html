@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANANYA THAKUR.EXE | Your Digital Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- BOOT SCREEN -->
+    <div id="bootScreen">
+        <div class="bootBox">
+            <h1>ANANYA<span>.EXE</span></h1>
+
+            <p id="bootText">INITIALIZING DIGITAL UNIVERSE...</p>
+
+            <div class="progressBar">
+                <div id="progressFill"></div>
+            </div>
+
+            <p class="bootSmall">SYSTEM STATUS: ONLINE</p>
+        </div>
+    </div>
+
+
+    <!-- HOME SCREEN -->
+    <section id="home" class="hidden">
+        <div class="hero">
+
+            <p class="systemLabel">SYSTEM ONLINE // WELCOME</p>
+
+            <h1 class="mainTitle">ANANYA THAKUR<span>.EXE</span></h1>
+
+            <p class="subtitle">YOUR DIGITAL UNIVERSE</p>
+
+            <p class="intro">
+                Welcome to my world.<br> A mind full of ideas, a universe full of possibilities.
+            </p>
+
+            <button id="enterBtn" type="button">
+                ENTER THE UNIVERSE ↗
+            </button>
+
+            <p class="footerText">DESIGNED BY ANANYA THAKUR // VERSION 1.0.0</p>
+
+        </div>
+    </section>
+
+
+    <!-- MAIN UNIVERSE -->
+    <section id="universe" class="hidden">
+
+        <header class="mainHeader">
+            <div class="logo">ANANYA THAKUR<span>.EXE</span></div>
+            <div class="status"><span class="onlineDot">●</span> SYSTEM ONLINE</div>
+        </header>
+
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <p class="systemLabel">USER DETECTED</p>
+            <h1>Welcome to my universe.</h1>
+            <p>Explore my mind. Discover my creativity. Enter the unknown.</p>
+        </section>
+
+        <!-- ABOUT ANNE PROFILE -->
+        <section class="aboutAnne">
+            <div class="profileCard">
+                <div class="profileBadge">✦ CREATOR PROFILE ✦</div>
+
+                <div class="animatedProfile">
+
+                    <div class="profileRing"></div>
+
+                    <div class="anne-ai" id="aiAgent">
+
+                        <div class="ai-orbit orbit-one"></div>
+                        <div class="ai-orbit orbit-two"></div>
+
+                        <div class="ai-spark spark-one">✦</div>
+                        <div class="ai-spark spark-two">✧</div>
+                        <div class="ai-spark spark-three">♡</div>
+
+                        <svg class="ai-character" viewBox="0 0 260 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anne's animated AI companion">
+
+            <defs>
+                <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#f5d0fe"/>
+                    <stop offset="35%" stop-color="#c084fc"/>
+                    <stop offset="70%" stop-color="#8b5cf6"/>
+                    <stop offset="100%" stop-color="#4338ca"/>
+                </linearGradient>
+
+                <linearGradient id="hairLight" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#fff"/>
+                    <stop offset="50%" stop-color="#f5d0fe"/>
+                    <stop offset="100%" stop-color="#c4b5fd"/>
+                </linearGradient>
+
+                <linearGradient id="skin" x1="0" y1="0" x2="0.8" y2="1">
+                    <stop offset="0%" stop-color="#fff1f7"/>
+                    <stop offset="100%" stop-color="#f8c9e0"/>
+                </linearGradient>
+
+                <linearGradient id="outfit" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#f5d0fe"/>
+                    <stop offset="50%" stop-color="#a78bfa"/>
+                    <stop offset="100%" stop-color="#6d28d9"/>
+                </linearGradient>
+
+                <linearGradient id="eye" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#67e8f9"/>
+                    <stop offset="45%" stop-color="#818cf8"/>
+                    <stop offset="100%" stop-color="#312e81"/>
+                </linearGradient>
+
+                <radialGradient id="halo">
+                    <stop offset="0%" stop-color="#c084fc" stop-opacity=".35"/>
+                    <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+                </radialGradient>
+
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="5" result="blur"/>
+                    <feMerge>
+                        <feMergeNode in="blur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <!-- Magical aura -->
+            <circle cx="130" cy="145" r="105"
+                    fill="url(#halo)"/>
+
+            <!-- Floating holographic halo -->
+            <ellipse cx="130" cy="155" rx="91" ry="120"
+                     fill="none"
+                     stroke="#a78bfa"
+                     stroke-width="1"
+                     stroke-dasharray="3 9"
+                     opacity=".7"/>
+
+            <!-- Back hair -->
+            <path d="M65 105
+                     Q51 54 91 39
+                     Q130 15 169 39
+                     Q211 58 196 113
+                     L210 205
+                     Q207 246 184 260
+                     L177 160
+                     L83 160
+                     L76 254
+                     Q49 239 51 202 Z"
+                  fill="url(#hair)"
+                  stroke="#d8b4fe"
+                  stroke-width="1.5"/>
+
+            <!-- Hair highlights -->
+            <path d="M76 87 Q62 133 70 197"
+                  fill="none"
+                  stroke="url(#hairLight)"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  opacity=".8"/>
+
+            <path d="M182 77 Q201 130 190 187"
+                  fill="none"
+                  stroke="#ddd6fe"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  opacity=".7"/>
+
+            <!-- Neck -->
+            <path d="M112 166 L110 194
+                     Q130 210 150 192
+                     L147 164 Z"
+                  fill="url(#skin)"/>
+
+            <!-- Shoulders -->
+            <path d="M112 185
+                     Q79 190 68 219
+                     L53 273
+                     Q130 300 207 273
+                     L192 219
+                     Q180 190 147 185
+                     L130 205 Z"
+                  fill="url(#outfit)"
+                  stroke="#d8b4fe"
+                  stroke-width="1.5"/>
+
+            <!-- Outfit details -->
+            <path d="M108 192 L130 215 L151 192"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="2.5"
+                  opacity=".9"/>
+
+            <path d="M130 220 L139 233 L130 246 L121 233 Z"
+                  fill="#67e8f9"
+                  stroke="#e0f2fe"
+                  stroke-width="1"
+                  filter="url(#glow)"/>
+
+            <!-- Face -->
+            <path d="M84 91
+                     Q84 61 130 61
+                     Q176 61 176 94
+                     L170 139
+                     Q165 172 130 183
+                     Q95 172 90 139 Z"
+                  fill="url(#skin)"
+                  stroke="#ffe4f1"
+                  stroke-width="1.5"/>
+
+            <!-- Fringe -->
+            <path d="M78 105
+                     Q67 66 103 47
+                     Q143 25 176 58
+                     Q192 74 181 109
+                     L166 94
+                     L158 72
+                     Q145 94 127 101
+                     L130 78
+                     Q111 102 91 107
+                     L95 88 Z"
+                  fill="url(#hair)"
+                  stroke="#e9d5ff"
+                  stroke-width="1"/>
+
+            <!-- Side locks -->
+            <path d="M87 87
+                     Q69 117 81 168
+                     L91 192
+                     Q99 166 97 135 Z"
+                  fill="url(#hair)"/>
+
+            <path d="M173 86
+                     Q192 118 179 168
+                     L169 192
+                     Q161 165 164 135 Z"
+                  fill="url(#hair)"/>
+
+            <!-- Left eye -->
+            <path d="M98 124 Q111 111 123 125
+                     Q111 144 98 124 Z"
+                  fill="#fff"/>
+
+            <ellipse cx="111" cy="126" rx="7" ry="11"
+                     fill="url(#eye)"/>
+
+            <circle cx="113" cy="122" r="3"
+                    fill="#fff"/>
+
+            <circle cx="108" cy="130" r="1.8"
+                    fill="#e0f2fe"/>
+
+            <!-- Right eye -->
+            <path d="M137 125 Q149 111 162 124
+                     Q149 144 137 125 Z"
+                  fill="#fff"/>
+
+            <ellipse cx="149" cy="126" rx="7" ry="11"
+                     fill="url(#eye)"/>
+
+            <circle cx="151" cy="122" r="3"
+                    fill="#fff"/>
+
+            <circle cx="146" cy="130" r="1.8"
+                    fill="#e0f2fe"/>
+
+            <!-- Eyelashes -->
+            <path d="M98 122 L94 118 M104 116 L102 112
+                     M159 121 L164 117 M153 116 L155 112"
+                  stroke="#51416f"
+                  stroke-width="2"
+                  stroke-linecap="round"/>
+
+            <!-- Blush -->
+            <ellipse cx="99" cy="143" rx="9" ry="4"
+                     fill="#fb91bd" opacity=".6"/>
+
+            <ellipse cx="161" cy="143" rx="9" ry="4"
+                     fill="#fb91bd" opacity=".6"/>
+
+            <!-- Nose -->
+            <circle cx="130" cy="143" r="1.8"
+                    fill="#dc8bab"/>
+
+            <!-- Smile -->
+            <path d="M124 153 Q130 159 136 153"
+                  fill="none"
+                  stroke="#c05c8d"
+                  stroke-width="2"
+                  stroke-linecap="round"/>
+
+            <!-- Futuristic hair accessory -->
+            <path d="M161 53
+                     Q180 35 195 49
+                     L185 69 Z"
+                  fill="#e9d5ff"
+                  stroke="#fff"
+                  stroke-width="1.5"/>
+
+            <path d="M161 53
+                     Q145 37 139 53
+                     Q146 68 161 59 Z"
+                  fill="#c084fc"
+                  stroke="#fff"
+                  stroke-width="1.5"/>
+
+            <circle cx="161" cy="56" r="5"
+                    fill="#67e8f9"
+                    stroke="#fff"
+                    stroke-width="1.5"/>
+
+            <!-- Tiny stars -->
+            <path d="M49 107 L52 115 L60 118
+                     L52 121 L49 129 L46 121
+                     L38 118 L46 115 Z"
+                  fill="#e9d5ff"/>
+
+            <path d="M205 144 L208 151 L215 154
+                     L208 157 L205 164 L202 157
+                     L195 154 L202 151 Z"
+                  fill="#67e8f9"/>
+
+            <circle cx="69" cy="191" r="3"
+                    fill="#67e8f9"/>
+
+            <circle cx="192" cy="199" r="3"
+                    fill="#f0abfc"/>
+
+        </svg>
+
+                        <div class="ai-name">ANANYA'S AI ✦</div>
+
+                        <div class="ai-status">
+                            <span></span> ONLINE
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <span class="profileOnline">● AI ONLINE</span>
+
+            </div>
+
+
+            <h2>HEY, I'M ANANYA!</h2>
+            <p class="profileRole">STUDENT • CODER • CREATOR • ANIME LOVER</p>
+
+            <p class="profileDescription">
+                Welcome to my digital universe! ✨ I'm learning to code, exploring technology, creating new projects and turning my ideas into reality. This is my journey, one line of code at a time.
+            </p>
+
+            <div class="profileTags">
+                <span>💻 Coding</span>
+                <span>🎌 Anime</span>
+                <span>🎨 Creativity</span>
+                <span>🚀 Big Dreams</span>
+            </div>
+
+            <div class="profileGoal">
+                <span>MY CURRENT MISSION</span>
+                <p>Learn. Build. Improve. Repeat.</p>
+            </div>
+            </div>
+        </section>
+
+
+        <!-- FOUR SQUARE CARDS -->
+        <section class="roomsSection">
+
+            <h2 class="sectionTitle">CHOOSE YOUR DESTINATION</h2>
+
+            <div class="cardContainer">
+
+                <!-- CARD 01 -->
+                <div class="card" data-room="about" tabindex="0" role="button">
+
+                    <span class="cardNumber">01 //</span>
+
+                    <div class="cardSymbol">☾</div>
+
+                    <h3>MIND ROOM</h3>
+
+                    <p>
+                        A mind beyond the ordinary.
+                        <span>Dreams in progress.</span> Thoughts without limits.
+                    </p>
+
+                    <span class="cardAction">EXPLORE <span>↗</span></span>
+
+                </div>
+
+
+                <!-- CARD 02 -->
+                <div class="card" data-room="skills" tabindex="0" role="button">
+
+                    <span class="cardNumber">02 //</span>
+
+                    <div class="cardSymbol">⌘</div>
+
+                    <h3>CREATOR LAB</h3>
+
+                    <p>
+                        Ideas become experiments.
+                        <span>Imagination becomes code.</span> Creativity has no limits.
+                    </p>
+
+                    <span class="cardAction">EXPLORE <span>↗</span></span>
+
+                </div>
+
+
+                <!-- CARD 03 -->
+                <div class="card" data-room="game" tabindex="0" role="button">
+
+                    <span class="cardNumber">03 //</span>
+
+                    <div class="cardSymbol">⚡</div>
+
+                    <h3>CHAOS ROOM</h3>
+
+                    <p>
+                        Enter the unexpected.
+                        <span>Glitch the ordinary.</span> Let curiosity lead the way.
+                    </p>
+
+                    <span class="cardAction">EXPLORE <span>↗</span></span>
+
+                </div>
+
+
+                <!-- CARD 04 -->
+                <div class="card" data-room="secret" tabindex="0" role="button">
+
+                    <span class="cardNumber">04 //</span>
+
+                    <div class="cardSymbol">✧</div>
+
+                    <h3>SECRET ZONE</h3>
+
+                    <p>
+                        Not everything is revealed.
+                        <span>Some worlds hold secrets.</span> Dare to discover more?
+                    </p>
+
+                    <span class="cardAction">EXPLORE <span>↗</span></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MY PROJECTS -->
+        <section class="projectsSection">
+            <p class="systemLabel">MY CREATIVE WORK</p>
+            <h2 class="sectionTitle">PROJECT DATABASE</h2>
+
+            <div class="projectsGrid">
+
+                <div class="projectCard">
+                    <span class="projectNumber">PROJECT_01</span>
+                    <div class="projectIcon">🌌</div>
+                    <h3>ANANYA THAKUR.EXE</h3>
+                    <p>My personal digital universe with interactive rooms, a terminal and a futuristic interface.</p>
+                    <div class="projectTags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <span class="projectStatus">● IN DEVELOPMENT</span>
+                </div>
+
+                <div class="projectCard">
+                    <span class="projectNumber">PROJECT_02</span>
+                    <div class="projectIcon">🎌</div>
+                    <h3>ANIME UNIVERSE</h3>
+                    <p>An anime-inspired project concept featuring characters, creative visuals and interactive ideas.</p>
+                    <div class="projectTags">
+                        <span>Anime</span>
+                        <span>Web Design</span>
+                    </div>
+                    <span class="projectStatus">● PLANNED</span>
+                </div>
+
+                <div class="projectCard">
+                    <span class="projectNumber">PROJECT_03</span>
+                    <div class="projectIcon">🎮</div>
+                    <h3>MINI GAME LAB</h3>
+                    <p>A space for experimenting with small browser games and learning game logic through code.</p>
+                    <div class="projectTags">
+                        <span>JavaScript</span>
+                        <span>Game Dev</span>
+                    </div>
+                    <span class="projectStatus">● PLANNED</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- NEON DODGE GAME -->
+        <section class="gameSection">
+            <p class="systemLabel">ARCADE MODULE // 001</p>
+            <h2 class="sectionTitle">NEON DODGE</h2>
+
+            <div class="gamePanel">
+                <p class="gameInstructions">
+                    Move with ← → arrow keys or A / D. Dodge the falling blocks!
+                </p>
+
+                <div class="gameHUD">
+                    <span>SCORE: <strong id="gameScore">0</strong></span>
+                    <span>BEST: <strong id="gameBest">0</strong></span>
+                </div>
+
+                <canvas id="gameCanvas" width="600" height="350" aria-label="Neon Dodge game area"></canvas>
+
+                <button id="gameStartBtn" type="button">▶ START GAME</button>
+
+                <div class="gameExtraControls">
+                    <label for="gameDifficulty">DIFFICULTY:</label>
+                    <select id="gameDifficulty">
+             <option value="easy">EASY</option>
+             <option value="normal" selected>NORMAL</option>
+             <option value="hard">HARD</option>
+                </select>
+
+                    <button id="gamePauseBtn" type="button">Ⅱ PAUSE</button>
+                </div>
+
+
+
+                <div class="gameTouchControls">
+                    <button id="moveLeftBtn" type="button" aria-label="Move left">◀ LEFT</button>
+                    <button id="moveRightBtn" type="button" aria-label="Move right">RIGHT ▶</button>
+                </div>
+
+
+                <p id="gameMessage" aria-live="polite">Ready, player one?</p>
+            </div>
+        </section>
+
+
+
+        <!-- TERMINAL -->
+        <section class="terminalSection">
+            <div class="terminal">
+
+                <div class="terminal-header">
+                    <span>ANANYA_TERMINAL.exe</span>
+                    <span>● ● ●</span>
+                </div>
+
+                <div class="terminal-body">
+                    <p>Welcome to ANANYA_OS Terminal.</p>
+                    <p>Type <strong>help</strong> to see available commands.</p>
+
+                    <div id="terminalOutput" aria-live="polite"></div>
+
+                    <form id="terminalForm">
+                        <label for="terminalInput">visitor@ananya:~$</label>
+
+                        <input type="text" id="terminalInput" placeholder="Type a command..." autocomplete="off">
+
+                        <button type="submit">RUN</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECRET ACCESS -->
+        <section class="secretSection">
+            <div class="secretPanel">
+
+                <p class="systemLabel">RESTRICTED AREA</p>
+                <h2>SECRET ACCESS</h2>
+                <p>Some doors require a special key.</p>
+
+                <form id="secretForm">
+                    <input type="password" id="secretPassword" placeholder="Enter access code..." autocomplete="off" aria-label="Secret access code">
+
+                    <button type="submit">UNLOCK</button>
+                </form>
+
+                <p id="secretMessage" aria-live="polite"></p>
+
+                <p class="hintText">HINT: ananya404</p>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT ANNE -->
+        <section class="contactSection">
+            <p class="systemLabel">OPEN A CONNECTION</p>
+            <h2 class="sectionTitle">CONTACT ME</h2>
+
+            <div class="contactPanel">
+                <div class="contactAvatar">A</div>
+
+                <h3>LET'S CONNECT.</h3>
+                <p class="contactDescription">
+                    Have an idea, a project, or just want to say hello? My digital inbox is waiting.
+                </p>
+
+                <div class="contactButtons">
+                    <a class="contactButton" href="https://github.com/ananyathakur004" target="_blank" rel="noopener noreferrer">
+                        <span>⌘</span> GITHUB ↗
+                    </a>
+
+                    <a class="contactButton" href="https://www.instagram.com/_ananyathakur001" target="_blank" rel="noopener noreferrer">
+                        <span>◎</span> INSTAGRAM ↗
+                    </a>
+
+                    <a class="contactButton" href="mailto:ananyathakur1411@gmail.com">
+                        <span>✉</span> EMAIL ME ↗
+                    </a>
+                </div>
+
+                <p class="contactNote">
+                    CONNECTION STATUS: WAITING FOR YOUR LINKS
+                </p>
+            </div>
+        </section>
+
+
+        <!-- LIVE SYSTEM MONITOR -->
+        <section class="monitorSection">
+            <div class="systemPanel">
+
+                <div class="systemTop">
+                    <span>ANANYA THAKUR_OS // SYSTEM MONITOR</span>
+                    <span class="onlineDot">● ONLINE</span>
+                </div>
+
+                <div id="liveClock">00:00:00</div>
+                <div id="liveDate">INITIALIZING...</div>
+
+                <div class="systemStats">
+
+                    <div class="statBox">
+                        <span>SYSTEM</span>
+                        <strong>ACTIVE</strong>
+                    </div>
+
+                    <div class="statBox">
+                        <span>MODE</span>
+                        <strong>CREATIVE</strong>
+                    </div>
+
+                    <div class="statBox">
+                        <span>VERSION</span>
+                        <strong>1.0.0</strong>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="mainFooter">
+            <p>ANANYA THAKUR.EXE © 2026</p>
+            <p>BUILT WITH CURIOSITY &amp; CODE.</p>
+            <p>END OF TRANSMISSION //</p>
+        </footer>
+
+    </section>
+
+
+    <!-- ROOM DETAILS -->
+    <section id="room" class="hidden">
+        <div class="roomContent">
+
+            <p class="systemLabel">DESTINATION UNLOCKED</p>
+
+            <h2 id="roomTitle">MIND ROOM</h2>
+
+            <p id="roomText"></p>
+
+            <button id="backBtn" type="button">
+                ← BACK TO UNIVERSE
+            </button>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
